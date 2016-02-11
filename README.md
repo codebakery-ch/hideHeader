@@ -14,3 +14,5 @@ This is a simple directive for AnuglarJS, which hides your navbar (or any elemen
 ```hideAfter: ``` value after which the element gets a new class
 
 ```hideClass:``` class to toggle when after @elm and after @hideAfter
+
+[demo:] (http://jsfiddle.net/8tnqkgb1/1/) 
