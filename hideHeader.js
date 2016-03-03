@@ -8,13 +8,10 @@ directive('hideHeader', ['$window', function ($window) {
             hideClass: '@' // class to toggle when after @elm and after @hideAfter
         },
         link: function (scope, element, attrs) {
-            var rect = $(element).offset();
-            var elmOffsetBottom = $(scope.elm).innerHeight();
-            var check = document.body.scrollTop > elmOffsetBottom;
-
-            scope.lastScrollTop = 0;
+          scope.lastScrollTop = 0;
             var doToggle = function () {
-                check = window.pageYOffset > elmOffsetBottom - 75;
+                var elmOffsetBottom = $(scope.elm).innerHeight();
+                var check = window.pageYOffset > elmOffsetBottom - 75;
                 $(element).toggleClass(scope.toggleClass, check);
                 scope.st = window.pageYOffset;
                 var posCheck = window.pageYOffset > elmOffsetBottom + parseFloat(scope.hideAfter);
